@@ -15,7 +15,20 @@ document.querySelectorAll('button a[href^="#"]').forEach((trigger) => {
   };
 });
 
-// Section One Counter + or -
+// Change backbround image
+const buttonChangeBg = document.getElementById("buttonChangeBg");
+const backgroundSection = document.getElementById("two");
+const colors = ["red", "blue", "green", "yellow"];
+
+backgroundSection.style.backgroundColor = "pink";
+buttonChangeBg.addEventListener("click", changeBackground);
+
+function changeBackground() {
+  const colorIndex = parseInt(Math.random() * colors.length);
+  backgroundSection.style.backgroundColor = colors[colorIndex];
+}
+
+// Section Counter + or -
 // default = 0
 let counter = 0;
 
